@@ -82,9 +82,10 @@
 
                 <Border Grid.Row="2" Grid.Column="1" CornerRadius="3" BorderThickness="1" BorderBrush="#FF4D4B48" Background="#FF202020">
 
-                    <TextBlock Text="This is a custom window!" FontFamily="Arial Rounded MT" FontSize="20" Foreground="#FFE1E1E1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+                    <DockPanel Background="Red" HorizontalAlignment="Right" Width="125"/>
                 </Border>
+
+
 
             </Grid>
         </Border>
