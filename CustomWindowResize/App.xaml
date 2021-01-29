@@ -1,0 +1,17 @@
+﻿<Application x:Class="CustomWindowResize.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CustomWindowResize"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        
+        <!--Theme-->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="maintheme.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    
+    </Application.Resources>
+</Application>
