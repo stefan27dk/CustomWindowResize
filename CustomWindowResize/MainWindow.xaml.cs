@@ -12,9 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System;
-using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 
 namespace CustomWindowResize
@@ -24,21 +21,29 @@ namespace CustomWindowResize
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        // ::MainWindow::
         public MainWindow()
         {
             InitializeComponent();
         }
 
+
+        // Close Button
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
+
+        // Minimize Button
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
 
+
+        // Resize the Canvas Window :Thumbs:
         private void Thumb_DragDelta(object sender, DragDeltaEventArgs e)
         {
             var str = (string)((Thumb)sender).Tag;

@@ -6,32 +6,82 @@
         xmlns:local="clr-namespace:CustomWindowResize"
         mc:Ignorable="d"
         Title="MainWindow" WindowStyle="None"  Background="Transparent" AllowsTransparency="True" WindowState="Maximized" d:DesignWidth="1291.5" d:DesignHeight="688">
+    <!--Settings for the window so it stays maximized-->
 
-    <Canvas Background="#00000000" Margin="22,26,22,21">
+    <!--
+    1. The Main Window is invisible
+    2. The Main window has Canvas which is used to hold the all the  content, like content holder - because of the resize bugs of windows
+    3. 
+    -->
+
+
+
+    <!--The Visible Content Area of the window - "Canvas"-->
+    <Canvas Background="Transparent" Margin="22,26,22,21">
+
+        <!--Frame Border-->
         <Border x:Name="Content" Canvas.Left="178" Canvas.Top="8" Width="500" Height="500" MinWidth="100" MinHeight="100" CornerRadius="2" Background="#FF3A3A3A">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
             </Border.Effect>
 
+
+            <!--Main - Grid-->
             <Grid>
 
                 <Grid.ColumnDefinitions>
+                    <!--Left - column-->
                     <ColumnDefinition Width="8" />
+                    <!-- Middle - column -->
                     <ColumnDefinition Width="*" />
+                    <!--Right - column-->
                     <ColumnDefinition Width="8" />
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="8" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="8" />
+                    <RowDefinition />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="4" />
                 </Grid.RowDefinitions>
 
-                <Thumb Opacity="0" Grid.Row="0" Grid.Column="0" Cursor="SizeNWSE" Tag="TL" DragDelta="Thumb_DragDelta"/>
-                <Thumb Opacity="0" Grid.Row="0" Grid.Column="2" Cursor="SizeNESW" Tag="TR" DragDelta="Thumb_DragDelta"/>
-                <Thumb Opacity="0" Grid.Row="3" Grid.Column="0" Cursor="SizeNESW" Tag="BL" DragDelta="Thumb_DragDelta"/>
-                <Thumb Opacity="0" Grid.Row="3" Grid.Column="2" Cursor="SizeNWSE" Tag="BR" DragDelta="Thumb_DragDelta"/>
+                <!--<Thumb Background="Red" Opacity="0" Grid.Row="0" Grid.Column="0" Cursor="SizeNWSE" Tag="TL" DragDelta="Thumb_DragDelta" Margin="98,40,-170,-59" HorizontalAlignment="Left" Width="122" Height="69" VerticalAlignment="Top"/>-->
+
+                <!--OLD THUMBS!!!!!!!!!!!!!-->
+                <!--<Thumb  Background="Lime" Opacity="0" Cursor="SizeNWSE" Tag="TL" DragDelta="Thumb_DragDelta" Margin="-49,-28,0,0" HorizontalAlignment="Left" Width="61" Height="52" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2" RenderTransformOrigin="0.596,0.514"/>
+                <Thumb Background="Red"   Grid.Row="3" Grid.Column="0" Cursor="SizeNESW" Tag="BL" DragDelta="Thumb_DragDelta" Margin="-26,11,0,0" RenderTransformOrigin="0.735,0.539" VerticalAlignment="Top" Height="33" Grid.RowSpan="2"/>
+                <Thumb Background="Yellow" Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNESW" Tag="TR" DragDelta="Thumb_DragDelta" Margin="456,-40,-31,455" HorizontalAlignment="Left" Width="122" Height="69" VerticalAlignment="Top" Grid.RowSpan="3" Grid.ColumnSpan="2"/>-->
+
+
+                <Thumb  Background="Lime"  Cursor="SizeNWSE" Tag="TL" DragDelta="Thumb_DragDelta" Margin="-49,-28,0,0" HorizontalAlignment="Left" Width="61" Height="52" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                <Thumb Background="Red"   Grid.Row="3" Grid.Column="0" Cursor="SizeNESW" Tag="BL" DragDelta="Thumb_DragDelta" Margin="-26,11,0,0" RenderTransformOrigin="0.735,0.539" VerticalAlignment="Top" Height="33" Grid.RowSpan="2"/>
+                <!--<Thumb Background="Yellow"  Grid.Row="0" Grid.Column="1" Cursor="SizeNESW" Tag="TR" DragDelta="Thumb_DragDelta" Margin="456,-40,-31,455" HorizontalAlignment="Left" Width="122" Height="69" VerticalAlignment="Top" Grid.RowSpan="3" Grid.ColumnSpan="2"/>-->
+                <Thumb  Background="Violet" Width="61" Height="52" Cursor="SizeNESW" Tag="TR" DragDelta="Thumb_DragDelta" Margin="0,-49,-53,0" HorizontalAlignment="Right"  VerticalAlignment="Top"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"/>
+
+
+                <Thumb  Background="#FF683DDC" Width="61" Height="52" Cursor="SizeNWSE" Tag="BR" DragDelta="Thumb_DragDelta" Margin="0,0,-58,-48" HorizontalAlignment="Right"  VerticalAlignment="Top"  Grid.Row="4" Grid.Column="2" Grid.RowSpan="1"/>
+
+
+
+                <!--<Thumb   Grid.Row="2"   Cursor="SizeNWSE" Tag="BR" DragDelta="Thumb_DragDelta" Margin="433,428,-50,-29" Grid.RowSpan="2" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Background="#FF683DDC" HorizontalAlignment="Left" Width="109"/>-->
+
+
+
+                <!--<Thumb Opacity="0" Grid.Row="2"   Cursor="SizeNWSE" Tag="BR" DragDelta="Thumb_DragDelta" Margin="433,428,-50,-29" Grid.RowSpan="2" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Background="#FF683DDC" HorizontalAlignment="Left" Width="109">
+                     
+                    <Thumb.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="0.36"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.16"/>
+                        </TransformGroup>
+                    </Thumb.RenderTransform>
+                </Thumb>-->
+
+
+
                 <Thumb Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNS" Tag="T" DragDelta="Thumb_DragDelta"/>
                 <Thumb Opacity="0" Grid.Row="3" Grid.Column="1" Cursor="SizeNS" Tag="B" DragDelta="Thumb_DragDelta"/>
                 <Thumb Opacity="0" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Cursor="SizeWE" Tag="L" DragDelta="Thumb_DragDelta"/>
@@ -76,11 +126,11 @@
                         <LineGeometry StartPoint="0,9" EndPoint="9,9"/>
                     </Button>
 
-                    <TextBlock Text="{Binding Title, RelativeSource={RelativeSource AncestorType=Window}}" IsHitTestVisible="False" Foreground="#FFE1E1E1"/>
+                    <TextBlock IsHitTestVisible="False" Foreground="#FFE1E1E1"/>
 
                 </DockPanel>
 
-                <Border Grid.Row="2" Grid.Column="1" CornerRadius="3" BorderThickness="1" BorderBrush="#FF4D4B48" Background="#FF202020">
+                <Border Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" CornerRadius="3" BorderThickness="1" BorderBrush="#FF4D4B48" Background="#FF202020">
 
                     <DockPanel Background="Red" HorizontalAlignment="Right" Width="125"/>
                 </Border>
@@ -89,5 +139,6 @@
 
             </Grid>
         </Border>
+
     </Canvas>
 </Window>
