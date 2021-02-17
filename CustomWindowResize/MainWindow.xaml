@@ -64,7 +64,7 @@
                 <Thumb Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNS" Tag="T" DragDelta="Thumb_DragDelta" Margin="13,-10,13,4"/>
                 <Thumb Opacity="0" Grid.Row="3" Grid.Column="1" Cursor="SizeNS" Tag="B" DragDelta="Thumb_DragDelta" Margin="13,0,13,-6"/>
                 <Thumb Opacity="0" Grid.Row="1" Grid.Column="0" Cursor="SizeWE" Tag="L" DragDelta="Thumb_DragDelta" Margin="-10,16,0,20" Grid.RowSpan="2"/>
-                <Thumb Opacity="0" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Cursor="SizeWE" Tag="R" DragDelta="Thumb_DragDelta" Margin="0,7,-10,20"/>
+                <Thumb Opacity="0" Grid.Row="1" Grid.Column="2" Cursor="SizeWE" Tag="R" DragDelta="Thumb_DragDelta" Margin="0,7,-10,20" Grid.RowSpan="2"/>
 
 
 
