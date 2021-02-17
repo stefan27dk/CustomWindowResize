@@ -11,7 +11,7 @@
     <!--
     1. The Main Window is invisible
     2. The Main window has Canvas which is used to hold the all the  content, like content holder - because of the resize bugs of windows
-    3. 
+    3. The Corner Drag Resize size is increased for better grib
     -->
 
 
@@ -19,7 +19,7 @@
     <!--The Visible Content Area of the window - "Canvas"-->
     <Canvas Background="Transparent" Margin="22,26,22,21">
 
-        <!--Frame Border-->
+        <!--Frame Color - "Border"-->
         <Border x:Name="Content" Canvas.Left="178" Canvas.Top="8" Width="500" Height="500" MinWidth="100" MinHeight="100" CornerRadius="2" Background="#FF3A3A3A">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
@@ -46,21 +46,21 @@
                     <RowDefinition Height="4" />
                 </Grid.RowDefinitions>
 
-            
-                
+
+
                 <!--CORNERS - Drag - Rezise -->
                 <Thumb Opacity="0" Tag="TL" Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="-13,-10,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top"     Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 <Thumb Opacity="0" Tag="TR" Cursor="SizeNESW" DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="0,-10,-13,0" HorizontalAlignment="Right" VerticalAlignment="Top"     Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
                 <Thumb Opacity="0" Tag="BL" Cursor="SizeNESW" DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="-13,0,0,-10" HorizontalAlignment="Left"  VerticalAlignment="Bottom"  Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 <Thumb Opacity="0" Tag="BR" Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="0,0,-13,-10" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-       
 
 
-                <Thumb Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNS" Tag="T" DragDelta="Thumb_DragDelta" Margin="13,0"/>
-                <Thumb Opacity="0" Grid.Row="3" Grid.Column="1" Cursor="SizeNS" Tag="B" DragDelta="Thumb_DragDelta" Margin="13,0,0,-6"/>
+
+                <Thumb Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNS" Tag="T" DragDelta="Thumb_DragDelta" Margin="13,-4,13,4"/>
+                <Thumb Opacity="0" Grid.Row="3" Grid.Column="1" Cursor="SizeNS" Tag="B" DragDelta="Thumb_DragDelta" Margin="13,0,13,-6"/>
                 <Thumb Opacity="0" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Cursor="SizeWE" Tag="L" DragDelta="Thumb_DragDelta" Margin="0,7,0,11"/>
-                <Thumb Opacity="0" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Cursor="SizeWE" Tag="R" DragDelta="Thumb_DragDelta" Margin="0,7,0,0"/>
-                <Thumb Opacity="0" Grid.Row="1" Grid.Column="1" Cursor="Arrow" Tag="M" DragDelta="Thumb_DragDelta"/>
+                <Thumb Opacity="0" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Cursor="SizeWE" Tag="R" DragDelta="Thumb_DragDelta" Margin="0,7,0,11"/>
+                <Thumb Opacity="0" Grid.Column="1" Cursor="Arrow" Tag="M" DragDelta="Thumb_DragDelta" Margin="0,4,0,0" Grid.RowSpan="2"/>
 
                 <DockPanel Grid.Row="1" Grid.Column="1">
 
@@ -96,11 +96,11 @@
                         </GeometryGroup>
                     </Button>
 
-                    <Button Click="Minimize_Click">
+                    <Button Click="Minimize_Click" Width="16">
                         <LineGeometry StartPoint="0,9" EndPoint="9,9"/>
                     </Button>
 
-                    <TextBlock IsHitTestVisible="False" Foreground="#FFE1E1E1"/>
+                    <TextBlock   IsHitTestVisible="False" Foreground="#FFE1E1E1"/>
 
                 </DockPanel>
 
