@@ -42,7 +42,7 @@
                     <RowDefinition Height="8" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition />
-                    <RowDefinition Height="40" />
+                    <!--<RowDefinition Height="39" />-->
                     <RowDefinition Height="4" />
                 </Grid.RowDefinitions>
 
@@ -54,8 +54,8 @@
                 <Thumb Background="Yellow" Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNESW" Tag="TR" DragDelta="Thumb_DragDelta" Margin="456,-40,-31,455" HorizontalAlignment="Left" Width="122" Height="69" VerticalAlignment="Top" Grid.RowSpan="3" Grid.ColumnSpan="2"/>-->
 
 
-                <Thumb  Background="Lime"  Cursor="SizeNWSE" Tag="TL" DragDelta="Thumb_DragDelta" Margin="-49,-28,0,0" HorizontalAlignment="Left" Width="61" Height="52" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-                <Thumb Background="Red" Tag="BL" Cursor="SizeNESW"  DragDelta="Thumb_DragDelta" Height="34" Width="34" Grid.Row="3" Grid.Column="0"  Grid.RowSpan="2" Grid.ColumnSpan="2"  Margin="-13,0,0,-10"  HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                <Thumb Background="Lime" Tag="TL" Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Height="25" Width="34" Margin="-13,-10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"    Grid.Row="0" Grid.Column="0"  Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                <Thumb Background="Red"  Tag="BL" Cursor="SizeNESW" DragDelta="Thumb_DragDelta" Height="25" Width="34" Margin="-13,0,0,-10"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="0"  Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 <!--<Thumb Background="Yellow"  Grid.Row="0" Grid.Column="1" Cursor="SizeNESW" Tag="TR" DragDelta="Thumb_DragDelta" Margin="456,-40,-31,455" HorizontalAlignment="Left" Width="122" Height="69" VerticalAlignment="Top" Grid.RowSpan="3" Grid.ColumnSpan="2"/>-->
                 <Thumb  Background="Violet" Width="61" Height="52" Cursor="SizeNESW" Tag="TR" DragDelta="Thumb_DragDelta" Margin="0,-49,-53,0" HorizontalAlignment="Right"  VerticalAlignment="Top"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"/>
 
@@ -82,11 +82,11 @@
 
 
 
-                <Thumb Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNS" Tag="T" DragDelta="Thumb_DragDelta"/>
-                <Thumb Opacity="0" Grid.Row="3" Grid.Column="1" Cursor="SizeNS" Tag="B" DragDelta="Thumb_DragDelta"/>
-                <Thumb Opacity="0" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Cursor="SizeWE" Tag="L" DragDelta="Thumb_DragDelta"/>
+                <Thumb Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNS" Tag="T" DragDelta="Thumb_DragDelta" Margin="13,0,0,0"/>
+                <Thumb Opacity="0" Grid.Row="3" Grid.Column="1" Cursor="SizeNS" Tag="B" DragDelta="Thumb_DragDelta" Margin="13,0,0,-6"/>
+                <Thumb Opacity="0" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Cursor="SizeWE" Tag="L" DragDelta="Thumb_DragDelta" Margin="0,7,0,11"/>
                 <Thumb Opacity="0" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Cursor="SizeWE" Tag="R" DragDelta="Thumb_DragDelta"/>
-                <Thumb Opacity="0" Grid.Row="1" Grid.Column="1" Cursor="SizeAll" Tag="M" DragDelta="Thumb_DragDelta"/>
+                <Thumb Opacity="0" Grid.Row="1" Grid.Column="1" Cursor="Arrow" Tag="M" DragDelta="Thumb_DragDelta"/>
 
                 <DockPanel Grid.Row="1" Grid.Column="1">
 
@@ -130,7 +130,7 @@
 
                 </DockPanel>
 
-                <Border Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" CornerRadius="3" BorderThickness="1" BorderBrush="#FF4D4B48" Background="#FF202020">
+                <Border Grid.Row="2" Grid.Column="1" CornerRadius="3" BorderThickness="1" BorderBrush="#FF4D4B48" Background="#FF202020" Margin="0,0,0,5">
 
                     <DockPanel Background="Red" HorizontalAlignment="Right" Width="125"/>
                 </Border>
