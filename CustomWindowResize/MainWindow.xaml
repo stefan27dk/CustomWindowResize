@@ -46,37 +46,14 @@
                     <RowDefinition Height="4" />
                 </Grid.RowDefinitions>
 
-                <!--<Thumb Background="Red" Opacity="0" Grid.Row="0" Grid.Column="0" Cursor="SizeNWSE" Tag="TL" DragDelta="Thumb_DragDelta" Margin="98,40,-170,-59" HorizontalAlignment="Left" Width="122" Height="69" VerticalAlignment="Top"/>-->
-
-                <!--OLD THUMBS!!!!!!!!!!!!!-->
-                <!--<Thumb  Background="Lime" Opacity="0" Cursor="SizeNWSE" Tag="TL" DragDelta="Thumb_DragDelta" Margin="-49,-28,0,0" HorizontalAlignment="Left" Width="61" Height="52" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2" RenderTransformOrigin="0.596,0.514"/>
-                <Thumb Background="Red"   Grid.Row="3" Grid.Column="0" Cursor="SizeNESW" Tag="BL" DragDelta="Thumb_DragDelta" Margin="-26,11,0,0" RenderTransformOrigin="0.735,0.539" VerticalAlignment="Top" Height="33" Grid.RowSpan="2"/>
-                <Thumb Background="Yellow" Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNESW" Tag="TR" DragDelta="Thumb_DragDelta" Margin="456,-40,-31,455" HorizontalAlignment="Left" Width="122" Height="69" VerticalAlignment="Top" Grid.RowSpan="3" Grid.ColumnSpan="2"/>-->
-
-
-                <Thumb Background="Lime" Tag="TL" Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Width="34" Height="25"  Margin="-13,-10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"    Grid.Row="0" Grid.Column="0"  Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-                <Thumb Background="Red"  Tag="BL" Cursor="SizeNESW" DragDelta="Thumb_DragDelta" Width="34" Height="25"  Margin="-13,0,0,-10"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="0"  Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-                <Thumb Background="Violet" Tag="TR" Cursor="SizeNESW" DragDelta="Thumb_DragDelta" Width="34" Height="25"   Margin="0,-10,-13,0" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
-                <Thumb  Background="#FF683DDC" Tag="BR" Cursor="SizeNWSE"  DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="0,0,-13, -10" HorizontalAlignment="Right"  VerticalAlignment="Bottom"  Grid.Row="2" Grid.Column="1" Grid.RowSpan="2"  Grid.ColumnSpan="2"/>
-
-
-
-                <!--<Thumb   Grid.Row="2"   Cursor="SizeNWSE" Tag="BR" DragDelta="Thumb_DragDelta" Margin="433,428,-50,-29" Grid.RowSpan="2" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Background="#FF683DDC" HorizontalAlignment="Left" Width="109"/>-->
-
-
-
-                <!--<Thumb Opacity="0" Grid.Row="2"   Cursor="SizeNWSE" Tag="BR" DragDelta="Thumb_DragDelta" Margin="433,428,-50,-29" Grid.RowSpan="2" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Background="#FF683DDC" HorizontalAlignment="Left" Width="109">
-                     
-                    <Thumb.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform AngleX="0.36"/>
-                            <RotateTransform/>
-                            <TranslateTransform X="-0.16"/>
-                        </TransformGroup>
-                    </Thumb.RenderTransform>
-                </Thumb>-->
-
+            
+                
+                <!--CORNERS - Drag - Rezise -->
+                <Thumb Opacity="0" Tag="TL" Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="-13,-10,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top"     Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                <Thumb Opacity="0" Tag="TR" Cursor="SizeNESW" DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="0,-10,-13,0" HorizontalAlignment="Right" VerticalAlignment="Top"     Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+                <Thumb Opacity="0" Tag="BL" Cursor="SizeNESW" DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="-13,0,0,-10" HorizontalAlignment="Left"  VerticalAlignment="Bottom"  Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                <Thumb Opacity="0" Tag="BR" Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Width="34" Height="25" Margin="0,0,-13,-10" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+       
 
 
                 <Thumb Opacity="0" Grid.Row="0" Grid.Column="1" Cursor="SizeNS" Tag="T" DragDelta="Thumb_DragDelta" Margin="13,0"/>
